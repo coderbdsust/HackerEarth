@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.udayansoft.coderbd.hackerearth.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_dark">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_button_height"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/up_arrow"
+            android:text="@string/event_button"
+            android:textColor="@color/colorPictonBlue"
+            android:textSize="@dimen/top_button_text_size" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_button_height"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/home"
+            android:text="@string/home_button"
+            android:textColor="@color/colorPictonBlue"
+            android:textSize="@dimen/top_button_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_orange_dark"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="8dp"
+            android:hint="@string/search_textview"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/content_margin"
+        android:background="@android:color/darker_gray">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Total Event(s): 18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rounded_rectangular_shape"
+            android:drawableLeft="@drawable/history"
+            android:paddingRight="4dp"
+            android:text="Open Favourite History" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.paging.listview.PagingListView
+            android:id="@+id/paging_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/sort_by_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/rounded_rectangular_shape"
+            android:text="sort by"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/favourite_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rectangular_shape"
+            android:text="Favourite"
+            android:layout_toRightOf="@+id/sort_by_textview"/>
+
+        <TextView
+            android:id="@+id/category_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rectangular_shape"
+            android:text="Category"
+            android:layout_alignBottom="@+id/favourite_textview"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/rounded_rectangular_shape"
+            android:text="API Quota: 93%"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
