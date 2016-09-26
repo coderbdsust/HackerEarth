@@ -10,8 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/holo_red_dark">
+        android:layout_height="wrap_content">
 
         <Button
             android:layout_width="match_parent"
@@ -35,7 +34,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginBottom="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
@@ -44,8 +42,7 @@
 
         <AutoCompleteTextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:background="@android:color/holo_orange_dark"
+            android:layout_height="45dp"
             android:drawableLeft="@drawable/search"
             android:drawablePadding="8dp"
             android:hint="@string/search_textview"
@@ -55,9 +52,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_margin="@dimen/content_margin"
-        android:background="@android:color/darker_gray">
+        android:layout_margin="@dimen/content_margin">
 
         <TextView
             android:layout_width="wrap_content"
@@ -73,16 +68,21 @@
             android:background="@drawable/rounded_rectangular_shape"
             android:drawableLeft="@drawable/history"
             android:paddingRight="4dp"
-            android:text="Open Favourite History" />
+            android:text="  Open Favourite History" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <com.paging.listview.PagingListView
             android:id="@+id/paging_list_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10sp" />
     </LinearLayout>
 
     <RelativeLayout
@@ -97,31 +97,30 @@
             android:layout_alignParentLeft="true"
             android:background="@drawable/rounded_rectangular_shape"
             android:text="sort by"
-            android:textSize="25sp"/>
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/favourite_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/sort_by_textview"
             android:background="@drawable/rounded_rectangular_shape"
-            android:text="Favourite"
-            android:layout_toRightOf="@+id/sort_by_textview"/>
+            android:text="Favourite" />
 
         <TextView
             android:id="@+id/category_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/favourite_textview"
             android:background="@drawable/rounded_rectangular_shape"
-            android:text="Category"
-            android:layout_alignBottom="@+id/favourite_textview"/>
+            android:text="Category" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-
+            android:layout_alignParentRight="true"
             android:background="@drawable/rounded_rectangular_shape"
-            android:text="API Quota: 93%"
-            android:layout_alignParentRight="true"/>
+            android:text="API Quota: 93%" />
 
 
     </RelativeLayout>

@@ -27,4 +27,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
     compile 'com.github.nicolasjafelle:paginglistview:1.2'
+    // https://mvnrepository.com/artifact/com.mcxiaoke.volley/library
+    compile group: 'com.mcxiaoke.volley', name: 'library', version: '1.0.19'
+
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/paging_list_item"
+    android:id="@+id/list_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/content_margin"
@@ -17,10 +17,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
+            <com.android.volley.toolbox.NetworkImageView
                 android:id="@+id/contest_imageview"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:padding="4dp"
+                android:layout_marginLeft="4dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/contest_image" />
 
@@ -34,8 +36,9 @@
 
             <ImageView
                 android:id="@+id/details_imageview"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:paddingRight="4dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/right_arrow" />
@@ -55,12 +58,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_marginLeft="6dp"
                 android:text="B O T" />
 
             <ImageView
                 android:id="@+id/star_imageview"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:paddingRight="4dp"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/star_black" />
 
